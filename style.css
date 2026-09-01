@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #070b12;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   TELAS
+========================= */
+
+.tela {
+    display: none;
+
+    min-height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.tela.ativa {
+    display: flex;
+}
+
+
+/* =========================
+   CAIXA
+========================= */
+
+.caixa {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 40px;
+
+    background: #111824;
+
+    border: 1px solid #29364a;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.icone {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.codigo {
+    margin-bottom: 12px;
+
+    color: #4c8dff;
+
+    font-family: monospace;
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+p {
+    color: #a8b4c6;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2878ff;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   LOGS
+========================= */
+
+.logs {
+    margin-top: 25px;
+
+    color: #8c9aae;
+
+    font-family: monospace;
+
+    line-height: 2.2;
+}
+
+.logs .ok {
+    color: #52ff99;
+}
+
+
+/* =========================
+   BARRAS
+========================= */
+
+.barra {
+    width: 100%;
+    height: 10px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #202938;
+}
+
+.barra div {
+    width: 0;
+    height: 100%;
+
+    background: #2878ff;
+
+    transition: width 0.5s;
+}
+
+
+/* =========================
+   DESAFIO
+========================= */
+
+.opcoes {
+    display: grid;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.opcoes button {
+    margin-top: 0;
+
+    text-align: left;
+
+    background: #192332;
+
+    border: 1px solid #2c3a4e;
+}
+
+.opcoes button:hover {
+    background: #24344d;
+}
+
+#mensagem {
+    margin-top: 20px;
+
+    padding: 14px;
+
+    background: #0a1018;
+
+    border-radius: 8px;
+
+    color: #8997aa;
+
+    font-family: monospace;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ANÁLISE
+========================= */
+
+.terminalMini {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #080d14;
+
+    border-radius: 8px;
+
+    color: #52ff99;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   ACESSO
+========================= */
+
+.check {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: #0a9147;
+
+    font-size: 35px;
+}
+
+.dados {
+    margin-top: 25px;
+
+    padding: 16px;
+
+    background: #090f17;
+
+    border-radius: 8px;
+
+    color: #8997aa;
+
+    font-family: monospace;
+
+    line-height: 2;
+}
+
+.dados span {
+    color: #52ff99;
+}
+
+.escondido {
+    display: none !important;
+}
+
+
+/* =========================
+   TERMINAL
+========================= */
+
+.terminal {
+    display: none;
+
+    min-height: 100vh;
+
+    background: #000;
+
+    color: #00ff66;
+
+    font-family: "Courier New", monospace;
+}
+
+.terminal.ativa {
+    display: block;
+}
+
+
+/* TOPO */
+
+.terminalTopo {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    border-bottom: 1px solid #063c1c;
+
+    font-size: 14px;
+}
+
+.terminalTopo span {
+    color: #087d36;
+    font-size: 11px;
+}
+
+
+/* CONTEÚDO */
+
+.terminalConteudo {
+    padding: 25px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+#terminalTexto {
+    white-space: pre-wrap;
+}
+
+
+/* CURSOR */
+
+.cursor {
+    display: inline-block;
+
+    width: 9px;
+    height: 17px;
+
+    background: #00ff66;
+
+    animation: piscar 0.8s infinite;
+}
+
+@keyframes piscar {
+
+    0%, 45% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   CARTÃO FICTÍCIO
+========================= */
+
+.cartao {
+    display: none;
+
+    width: min(430px, 100%);
+
+    margin-top: 30px;
+    padding: 22px;
+
+    background: #020a05;
+
+    border: 1px solid #00ff66;
+
+    box-shadow:
+        0 0 30px rgba(0, 255, 102, 0.15);
+}
+
+.chip {
+    width: 45px;
+    height: 32px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #00ff66;
+}
+
+.numero {
+    font-size: 20px;
+
+    letter-spacing: 4px;
+}
+
+.linha {
+    width: 100%;
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #087d36;
+}
+
+.label {
+    color: #159447;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado {
+    display: none;
+
+    width: min(500px, 100%);
+
+    margin-top: 25px;
+    padding: 18px;
+
+    border-left: 2px solid #00ff66;
+
+    background: #020a05;
+
+    color: #00d957;
+
+    line-height: 1.8;
+}
+
+
+/* BOTÃO FINAL */
+
+#btnFinal {
+    display: none;
+
+    max-width: 280px;
+
+    background: #00a947;
+
+    color: #000;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .caixa {
+        padding: 28px 22px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .terminalConteudo {
+        padding: 18px;
+        font-size: 12px;
+    }
+
+    .terminalTopo {
+        padding: 15px 18px;
+    }
+
+    .numero {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+}
