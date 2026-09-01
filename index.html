@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security System</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section id="inicio" class="tela ativa">
+
+        <div class="caixa">
+
+            <div class="icone">🔐</div>
+
+            <div class="codigo">
+                SECURITY SYSTEM // 01
+            </div>
+
+            <h1>Desafio de Segurança</h1>
+
+            <p>
+                Complete as etapas de verificação para
+                liberar o acesso ao módulo avançado.
+            </p>
+
+            <button id="btnInicio">
+                INICIAR DESAFIO
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VERIFICAÇÃO
+    ========================== -->
+
+    <section id="verificacao" class="tela">
+
+        <div class="caixa">
+
+            <div class="codigo">
+                SYSTEM CHECK
+            </div>
+
+            <h2>Verificando sistema...</h2>
+
+            <div class="logs">
+
+                <div id="log1">
+                    [ WAIT ] Verificando conexão...
+                </div>
+
+                <div id="log2">
+                    [ WAIT ] Analisando dispositivo...
+                </div>
+
+                <div id="log3">
+                    [ WAIT ] Estabelecendo conexão segura...
+                </div>
+
+            </div>
+
+            <div class="barra">
+                <div id="progresso"></div>
+            </div>
+
+            <button id="btnContinuar" class="escondido">
+                CONTINUAR
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESAFIO
+    ========================== -->
+
+    <section id="desafio" class="tela">
+
+        <div class="caixa">
+
+            <div class="codigo">
+                SECURITY CHECK // 01
+            </div>
+
+            <h2>Verificação de segurança</h2>
+
+            <p>
+                Você recebeu uma mensagem informando que
+                sua conta foi bloqueada e existe um link
+                para recuperar o acesso.
+            </p>
+
+            <h3>
+                Qual procedimento é mais seguro?
+            </h3>
+
+            <div class="opcoes">
+
+                <button data-correta="false">
+                    Acessar o link imediatamente
+                </button>
+
+                <button data-correta="true">
+                    Procurar o site oficial por conta própria
+                </button>
+
+                <button data-correta="false">
+                    Enviar sua senha para confirmar sua identidade
+                </button>
+
+                <button data-correta="false">
+                    Encaminhar a mensagem para outras pessoas
+                </button>
+
+            </div>
+
+            <div id="mensagem">
+                Aguardando resposta...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANÁLISE
+    ========================== -->
+
+    <section id="analise" class="tela">
+
+        <div class="caixa">
+
+            <div class="codigo">
+                ANALYSIS MODULE
+            </div>
+
+            <h2>Analisando desempenho...</h2>
+
+            <p>
+                Processando os resultados da verificação.
+            </p>
+
+            <div class="barra">
+                <div id="progressoAnalise"></div>
+            </div>
+
+            <div id="textoAnalise" class="terminalMini">
+                Initializing...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACESSO
+    ========================== -->
+
+    <section id="acesso" class="tela">
+
+        <div class="caixa">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div class="codigo">
+                AUTHENTICATION
+            </div>
+
+            <h1>Access Authorized</h1>
+
+            <p>
+                Todas as verificações foram concluídas.
+                O módulo avançado está disponível.
+            </p>
+
+            <div class="dados">
+
+                ACCESS LEVEL:
+                <span>ADVANCED</span>
+
+                <br>
+
+                STATUS:
+                <span>AUTHORIZED</span>
+
+                <br>
+
+                SESSION:
+                <span>ACTIVE</span>
+
+            </div>
+
+            <button id="btnModulo">
+                ACESSAR MÓDULO
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TERMINAL
+    ========================== -->
+
+    <section id="terminal" class="terminal">
+
+        <header class="terminalTopo">
+
+            <strong>
+                SECURE TERMINAL
+            </strong>
+
+            <span>
+                SYSTEM // 04
+            </span>
+
+        </header>
+
+
+        <main class="terminalConteudo">
+
+            <div id="terminalTexto"></div>
+
+            <span class="cursor"></span>
+
+
+            <!-- REPRESENTAÇÃO FICTÍCIA -->
+
+            <div id="cartao" class="cartao">
+
+                <div class="chip"></div>
+
+                <div class="numero">
+                    0000 0000 0000 0000
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="label">
+                    TEST CARD // SIMULATION
+                </div>
+
+            </div>
+
+
+            <div id="resultadoTerminal" class="resultado">
+
+                STATUS: COMPLETED<br>
+                ACCESS: ADVANCED<br>
+                PROCESS: FINISHED
+
+            </div>
+
+
+            <button id="btnFinal">
+                ENCERRAR SESSÃO
+            </button>
+
+        </main>
+
+    </section>
+
+
+    <!-- IMPORTANTE: SCRIPT -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
